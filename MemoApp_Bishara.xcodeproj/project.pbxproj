@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B230B8C62C9CC16300B9AC5E /* NewMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230B8C52C9CC16300B9AC5E /* NewMemoViewController.swift */; };
+		B230B9932CA3545B00B9AC5E /* noTextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230B9922CA3545B00B9AC5E /* noTextAlert.swift */; };
+		B230B9B92CA5F9EC00B9AC5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230B9B82CA5F9EC00B9AC5E /* DetailViewController.swift */; };
+		B2A6CB462CDD662000F53D7A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6CB452CDD662000F53D7A /* DataManager.swift */; };
 		B2C349512C8A4F9E00ABFB48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C349502C8A4F9E00ABFB48 /* AppDelegate.swift */; };
 		B2C349532C8A4F9E00ABFB48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C349522C8A4F9E00ABFB48 /* SceneDelegate.swift */; };
 		B2C349582C8A4F9E00ABFB48 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B2C349572C8A4F9E00ABFB48 /* Base */; };
@@ -18,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B230B8C52C9CC16300B9AC5E /* NewMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoViewController.swift; sourceTree = "<group>"; };
+		B230B9922CA3545B00B9AC5E /* noTextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noTextAlert.swift; sourceTree = "<group>"; };
+		B230B9B82CA5F9EC00B9AC5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B230BCD12CD1827A00B9AC5E /* MemoApp_Bishara.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemoApp_Bishara.entitlements; sourceTree = "<group>"; };
+		B2A6CB452CDD662000F53D7A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B2A6CBA72CE3F60A00F53D7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		B2C3494D2C8A4F9E00ABFB48 /* MemoApp_Bishara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoApp_Bishara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C349502C8A4F9E00ABFB48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C349522C8A4F9E00ABFB48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,11 +51,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2A6CB442CDD660700F53D7A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B2A6CB452CDD662000F53D7A /* DataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		B2C349442C8A4F9E00ABFB48 = {
 			isa = PBXGroup;
 			children = (
-				B2C349692C8A50E900ABFB48 /* Model */,
-				B2C349672C8A501D00ABFB48 /* MemoListTableViewController.swift */,
 				B2C3494F2C8A4F9E00ABFB48 /* MemoApp_Bishara */,
 				B2C3494E2C8A4F9E00ABFB48 /* Products */,
 			);
@@ -62,13 +78,20 @@
 		B2C3494F2C8A4F9E00ABFB48 /* MemoApp_Bishara */ = {
 			isa = PBXGroup;
 			children = (
+				B2A6CB442CDD660700F53D7A /* CoreData */,
+				B230BCD12CD1827A00B9AC5E /* MemoApp_Bishara.entitlements */,
 				B2C349502C8A4F9E00ABFB48 /* AppDelegate.swift */,
 				B2C349522C8A4F9E00ABFB48 /* SceneDelegate.swift */,
+				B2C349672C8A501D00ABFB48 /* MemoListTableViewController.swift */,
+				B230B8C52C9CC16300B9AC5E /* NewMemoViewController.swift */,
+				B230B9B82CA5F9EC00B9AC5E /* DetailViewController.swift */,
+				B230B9922CA3545B00B9AC5E /* noTextAlert.swift */,
 				B2C349562C8A4F9E00ABFB48 /* Main.storyboard */,
 				B2C3495C2C8A4FA000ABFB48 /* Assets.xcassets */,
 				B2C3495E2C8A4FA000ABFB48 /* LaunchScreen.storyboard */,
 				B2C349612C8A4FA000ABFB48 /* Info.plist */,
 				B2C349592C8A4F9E00ABFB48 /* MemoApp_Bishara.xcdatamodeld */,
+				B2C349692C8A50E900ABFB48 /* Model */,
 			);
 			path = MemoApp_Bishara;
 			sourceTree = "<group>";
@@ -109,7 +132,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					B2C3494C2C8A4F9E00ABFB48 = {
 						CreatedOnToolsVersion = 15.4;
@@ -117,7 +140,6 @@
 				};
 			};
 			buildConfigurationList = B2C349482C8A4F9E00ABFB48 /* Build configuration list for PBXProject "MemoApp_Bishara" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -125,6 +147,7 @@
 				Base,
 			);
 			mainGroup = B2C349442C8A4F9E00ABFB48;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = B2C3494E2C8A4F9E00ABFB48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -152,11 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B230B9932CA3545B00B9AC5E /* noTextAlert.swift in Sources */,
 				B2C3496B2C8A510C00ABFB48 /* Memo.swift in Sources */,
 				B2C3495B2C8A4F9E00ABFB48 /* MemoApp_Bishara.xcdatamodeld in Sources */,
 				B2C349512C8A4F9E00ABFB48 /* AppDelegate.swift in Sources */,
+				B230B8C62C9CC16300B9AC5E /* NewMemoViewController.swift in Sources */,
 				B2C349532C8A4F9E00ABFB48 /* SceneDelegate.swift in Sources */,
 				B2C349682C8A501D00ABFB48 /* MemoListTableViewController.swift in Sources */,
+				B2A6CB462CDD662000F53D7A /* DataManager.swift in Sources */,
+				B230B9B92CA5F9EC00B9AC5E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +194,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B2C349572C8A4F9E00ABFB48 /* Base */,
+				B2A6CBA72CE3F60A00F53D7A /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -216,6 +244,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -279,6 +308,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -306,8 +336,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MemoApp_Bishara/MemoApp_Bishara.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = TD629XFJVC;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemoApp_Bishara/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -315,6 +351,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,9 +359,15 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Projects-CSC338.MemoApp-Bishara";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -333,8 +376,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MemoApp_Bishara/MemoApp_Bishara.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = TD629XFJVC;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemoApp_Bishara/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -342,6 +391,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,9 +399,15 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Projects-CSC338.MemoApp-Bishara";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

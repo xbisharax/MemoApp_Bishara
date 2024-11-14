@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class MemoListTableViewController: UITableViewController {
     
@@ -19,14 +20,27 @@ class MemoListTableViewController: UITableViewController {
         return formatter
     }()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        print(#function)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound, .criticalAlert]) {(didAllow, Error) in
+            if didAllow{
+                notificationCenter.delegate = self
+            }
+//            print("didAllow\(didAllow)")
+        }
+        
+        NotificationCenter.default.addObserver(forName: NewMemoViewController.newMemo_Insert, object: nil, queue: OperationQueue.main){[weak self] _ in
+            self?.tableView.reloadData()
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -38,7 +52,8 @@ class MemoListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Memo.dummyMemmoList.count
+//        return Memo.dummyMemmoList.count
+        return DataManager.shared.memoList.count
     }
 
     
@@ -46,9 +61,10 @@ class MemoListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCell", for: indexPath)
 
         // Configure the cell...
-        let target = Memo.dummyMemmoList[indexPath.row]
+//        let target = Memo.dummyMemmoList[indexPath.row]
+        let target = DataManager.shared.memoList[indexPath.row]
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = formatter.string(from: target.inserDate)
+        cell.detailTextLabel?.text = formatter.string(from: target.insertDate!)
 
         return cell
     }
@@ -88,14 +104,31 @@ class MemoListTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
+            if let vc = segue.destination as? DetailViewController{
+                vc.memo = DataManager.shared.memoList[indexPath.row]
+            }
+        }
+        
     }
-    */
 
+}
+
+extension MemoListTableViewController:UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void){
+        completionHandler([.banner, .sound, .badge])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, openSettingsFor notification: UNNotification?){
+        let settingsViewController = UIViewController()
+        settingsViewController.view.backgroundColor = .gray
+        self.present(settingsViewController, animated: true, completion: nil)
+    }
 }

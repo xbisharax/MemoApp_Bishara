@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "7K3-fx-l70"; */
+"7K3-fx-l70.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "New Memo"; ObjectID = "Gbw-UK-LT6"; */
+"Gbw-UK-LT6.title" = "New Memo";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "HXE-u6-yLn"; */
+"HXE-u6-yLn.text" = "Title";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "aXa-gb-sMU"; */
+"aXa-gb-sMU.title" = "Item";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "cva-KV-6uf"; */
+"cva-KV-6uf.text" = "Subtitle";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "gks-7m-QLR"; */
+"gks-7m-QLR.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "w2i-qr-w7R"; */
+"w2i-qr-w7R.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Bishara"; ObjectID = "ylQ-K9-2of"; */
+"ylQ-K9-2of.title" = "Bishara";
