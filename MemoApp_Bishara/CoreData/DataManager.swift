@@ -41,6 +41,13 @@ class DataManager{
         saveContext()
     }
     
+    func deleteMemo(_ memo:Memo?){
+        if let memo = memo {
+            managedContext.delete(memo)
+            saveContext()
+        }
+    }
+    
     
     
     // MARK: - Core Data stack

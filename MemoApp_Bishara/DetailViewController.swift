@@ -23,6 +23,21 @@ class DetailViewController: UIViewController {
         return formatter
     }()
     
+    @IBAction func deleteMemo(_ sender: Any) {
+        let alert = UIAlertController(title: "Confirm", message: "Delete Memo?", preferredStyle: .alert)
+        let cancelAlert = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        let deleteAlert = UIAlertAction(title: "Delete", style: .destructive){ action in
+            DataManager.shared.deleteMemo(self.memo)
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(cancelAlert)
+        alert.addAction(deleteAlert)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination.children.first as? NewMemoViewController{
             vc.editTarget = memo

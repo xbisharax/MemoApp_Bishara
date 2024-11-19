@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1w-gL-0Kq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="231"/>
+            <point key="canvasLocation" x="920" y="229"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="71X-fb-dg5">
@@ -70,7 +70,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6t7-WS-LLg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="358" y="231"/>
+            <point key="canvasLocation" x="69" y="229"/>
         </scene>
         <!--Bishara's Memos-->
         <scene sceneID="CjH-QK-p5S">
@@ -156,6 +156,13 @@
                                     <constraint firstAttribute="width" constant="393" id="dOt-FU-JtP"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem systemItem="trash" id="XBA-4d-Xjs">
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="deleteMemo:" destination="4jw-rv-V1r" id="R6a-VQ-IKU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bl7-1v-HCq"/>
                                     <barButtonItem systemItem="compose" id="aXa-gb-sMU">
                                         <connections>
                                             <segue destination="UIT-k5-s1T" kind="presentation" id="6ys-lK-SNV"/>
@@ -194,12 +201,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HXE-u6-yLn">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HXE-u6-yLn">
                                                     <rect key="frame" x="20" y="0.0" width="353" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" systemColor="systemPurpleColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -229,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRP-n4-qZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-709" y="637"/>
+            <point key="canvasLocation" x="-709.16030534351137" y="636.61971830985919"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -241,6 +249,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
