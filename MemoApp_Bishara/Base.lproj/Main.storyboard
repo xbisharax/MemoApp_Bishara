@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1w-gL-0Kq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="-146"/>
+            <point key="canvasLocation" x="1207" y="231"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="71X-fb-dg5">
@@ -70,7 +70,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6t7-WS-LLg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="-146"/>
+            <point key="canvasLocation" x="358" y="231"/>
         </scene>
         <!--Bishara's Memos-->
         <scene sceneID="CjH-QK-p5S">
@@ -233,7 +233,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JGB-vw-2O7"/>
+        <segue reference="6ys-lK-SNV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
